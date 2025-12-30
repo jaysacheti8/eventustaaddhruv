@@ -46,7 +46,7 @@ const Header = () => {
                 src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg" 
                 alt="Event Ustaad" 
                 className={`transition-all duration-500 ${
-                  isScrolled ? 'h-16' : 'h-20'
+                  isScrolled ? 'h-24' : 'h-30'
                 } w-auto transform group-hover:scale-105`}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
