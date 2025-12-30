@@ -4,7 +4,8 @@ const ClientLogos = () => {
   const clients = [
     {
       name: "Danone",
-      logo: "https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/3avfkqjs_Screenshot%202025-12-30%20at%202.24.02%E2%80%AFPM.png#danone"
+      // Using a placeholder that will fallback to text if needed
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%230085CA'%3EDanone%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Novo Nordisk",
@@ -12,7 +13,7 @@ const ClientLogos = () => {
     },
     {
       name: "Alkem",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Alkem_Laboratories_logo.svg/320px-Alkem_Laboratories_logo.svg.png"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' font-weight='bold' fill='%230047AB'%3EAlkem%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Asian Paints",
@@ -20,19 +21,19 @@ const ClientLogos = () => {
     },
     {
       name: "Fintoo",
-      logo: "https://media.licdn.com/dms/image/v2/C4D0BAQGxF8VWqxPY-A/company-logo_200_200/company-logo_200_200/0/1630481715504/fintoo_logo?e=2147483647&v=beta&t=vqYVJQhxQPVQqU0QxKQxG0qQxG0qQ"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' font-weight='bold' fill='%2300A0DC'%3EFintoo%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Future Generali",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Future_Generali_India_Life_Insurance_Logo.svg/320px-Future_Generali_India_Life_Insurance_Logo.svg.png"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23C8102E'%3EFuture Generali%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Lodha",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Lodha_Group_logo.svg/320px-Lodha_Group_logo.svg.png"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='28' font-weight='bold' fill='%23B8860B'%3ELODHA%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Godrej Tyson",
-      logo: "https://www.godrejtyson.com/images/logo.png"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='22' fill='%23FF0000'%3EGodrej Tyson%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Cipla",
@@ -40,16 +41,16 @@ const ClientLogos = () => {
     },
     {
       name: "Schbang",
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQHxQxG0qQxG0q/company-logo_200_200/0/1630481715504/schbang_logo"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' font-weight='bold' fill='%23FF6B35'%3ESchbang%3C/text%3E%3C/svg%3E"
     },
     {
       name: "SISL",
-      logo: "https://www.sisl.in/images/logo.png"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='32' font-weight='bold' fill='%23E31E24'%3ESISL%3C/text%3E%3C/svg%3E"
     }
   ];
 
   // Duplicate for seamless infinite scroll
-  const duplicatedClients = [...clients, ...clients];
+  const duplicatedClients = [...clients, ...clients, ...clients];
 
   return (
     <section className="py-16 bg-white overflow-hidden">
@@ -60,22 +61,22 @@ const ClientLogos = () => {
       </div>
 
       <div className="relative">
+        {/* Gradient overlays for fade effect */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+        
         <div className="flex animate-scroll hover:pause-animation items-center">
           {duplicatedClients.map((client, index) => (
             <div
               key={`${client.name}-${index}`}
-              className="flex-shrink-0 px-8 md:px-12 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500"
+              className="flex-shrink-0 px-8 md:px-12 flex items-center justify-center filter grayscale hover:grayscale-0 transition-all duration-500 transform hover:scale-110"
               style={{ minWidth: '220px', height: '100px' }}
             >
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-h-16 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
-                onError={(e) => {
-                  // Fallback to text if image fails to load
-                  e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = `<div class="text-2xl md:text-3xl font-light text-gray-400 hover:text-gray-900 transition-colors duration-300">${client.name}</div>`;
-                }}
+                className="max-h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
               />
             </div>
           ))}
