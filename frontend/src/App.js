@@ -4,13 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
-import Home from "./pages/Home";
+import NewHome from "./pages/NewHome";
 import About from "./pages/About";
 import WeddingServices from "./pages/WeddingServices";
-import CorporateServices from "./pages/CorporateServices";
-import Portfolio from "./pages/Portfolio";
-import Packages from "./pages/Packages";
-import Testimonials from "./pages/Testimonials";
+import CorporateEvents from "./pages/CorporateEvents";
+import SocialEvents from "./pages/SocialEvents";
+import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import { Toaster } from "./components/ui/sonner";
 
@@ -20,13 +19,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<NewHome />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services/weddings" element={<WeddingServices />} />
-          <Route path="/services/corporate" element={<CorporateServices />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/packages" element={<Packages />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/weddings" element={<WeddingServices />} />
+          <Route path="/corporate-events" element={<CorporateEvents />} />
+          <Route path="/social-events" element={<SocialEvents />} />
+          <Route path="/our-work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
