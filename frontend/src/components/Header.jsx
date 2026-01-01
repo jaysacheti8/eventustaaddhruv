@@ -94,7 +94,9 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-purple-50 transition-all duration-300 hover:scale-110"
+            className={`lg:hidden p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
+              isScrolled ? 'text-[#1F1F1F] hover:bg-[#EFE9DF]' : 'text-white hover:bg-white/10'
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
