@@ -124,13 +124,13 @@ const Header = () => {
             <div className="pt-4 space-y-2">
               <a 
                 href="tel:+919833310150"
-                className="flex items-center justify-center gap-2 px-4 py-3 text-purple-600 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors"
+                className="flex items-center justify-center gap-2 px-4 py-3 text-[#C6A75E] bg-[#C6A75E]/10 rounded-lg hover:bg-[#C6A75E]/20 transition-colors"
               >
                 <Phone size={18} />
                 <span>Call Us</span>
               </a>
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-purple-500 via-purple-400 to-pink-400 hover:from-purple-600 hover:via-purple-500 hover:to-pink-500 text-white shadow-lg">
+                <Button className="w-full bg-[#C6A75E] hover:bg-[#A88849] text-white shadow-sm">
                   Plan Your Event
                 </Button>
               </Link>
