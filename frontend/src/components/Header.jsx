@@ -77,15 +77,17 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <a 
               href="tel:+919833310150"
-              className="flex items-center gap-2 px-4 py-2 text-purple-600 hover:text-purple-700 transition-colors duration-300"
+              className={`flex items-center gap-2 px-4 py-2 transition-colors duration-300 ${
+                isScrolled ? 'text-[#C6A75E] hover:text-[#A88849]' : 'text-white hover:text-[#C6A75E]'
+              }`}
             >
               <Phone size={18} />
               <span className="text-sm font-medium">Call Us</span>
             </a>
             <Link to="/contact">
-              <Button className="relative bg-gradient-to-r from-purple-500 via-purple-400 to-pink-400 hover:from-purple-600 hover:via-purple-500 hover:to-pink-500 text-white px-6 py-2.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden group">
+              <Button className="relative bg-[#C6A75E] hover:bg-[#A88849] text-white px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden group">
                 <span className="relative z-10">Plan Your Event</span>
-                <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </Button>
             </Link>
           </div>
