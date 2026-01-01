@@ -166,7 +166,7 @@ const NewHome = () => {
 
           <div className="text-center mt-12">
             <Link to="/our-work">
-              <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-8 py-6 text-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 View All Work
                 <ArrowRight className="ml-2" size={20} />
               </Button>
@@ -175,8 +175,11 @@ const NewHome = () => {
         </div>
       </section>
 
+      {/* Rotating Client Logos */}
+      <RotatingClientLogos />
+
       {/* Testimonials */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-lavender-50 to-pink-50">
+      <section className="py-24 bg-[#EFE9DF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
