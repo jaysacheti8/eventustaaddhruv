@@ -65,7 +65,7 @@ const Header = () => {
                 }}
               >
                 <span className="relative z-10">{link.label}</span>
-                <div className={`absolute inset-0 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg transform transition-transform duration-300 ${
+                <div className={`absolute inset-0 bg-[#C6A75E]/10 rounded-lg transform transition-transform duration-300 ${
                   isActive(link.path) 
                     ? 'scale-100' 
                     : 'scale-0 group-hover:scale-100'
