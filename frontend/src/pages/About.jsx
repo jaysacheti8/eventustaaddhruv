@@ -136,32 +136,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Destinations */}
-      <section className="py-24 bg-gradient-to-br from-lavender-50 via-purple-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
-              Where We Create Magic
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From royal palaces to pristine beaches, we've crafted unforgettable experiences across India
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {destinations.map((destination, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-lg p-4 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-purple-100"
-              >
-                <MapPin className="text-purple-400 mx-auto mb-2" size={20} />
-                <div className="text-sm font-medium text-gray-700">{destination}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-purple-400 via-purple-300 to-lavender-300 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
