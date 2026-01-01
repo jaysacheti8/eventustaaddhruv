@@ -4,7 +4,8 @@ import { ArrowRight, Heart, Briefcase, PartyPopper } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import HeroCarousel from '../components/HeroCarousel';
-import HowWeWork from '../components/HowWeWork';
+import HowWeWorkNew from '../components/HowWeWorkNew';
+import RotatingClientLogos from '../components/RotatingClientLogos';
 import EventsCreatedSection from '../components/EventsCreatedSection';
 import { weddingServices } from '../mockData';
 
