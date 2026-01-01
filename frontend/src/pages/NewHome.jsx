@@ -230,20 +230,20 @@ const NewHome = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-24 bg-gradient-to-br from-purple-600 via-purple-500 to-pink-500 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-24 bg-[#C6A75E] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-5xl md:text-6xl font-light text-white mb-6">
+          <h2 className="text-5xl md:text-6xl font-light text-white mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
             Let's Create Magic Together
           </h2>
           <p className="text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ready to plan your dream event?
           </p>
           <Link to="/contact">
-            <Button className="bg-white text-purple-700 hover:bg-purple-50 px-10 py-6 text-xl rounded-lg shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:-translate-y-1">
+            <Button className="bg-white text-[#1F1F1F] hover:bg-[#FAF7F2] px-10 py-6 text-xl rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               Contact Us Today
               <ArrowRight className="ml-2" size={24} />
             </Button>
