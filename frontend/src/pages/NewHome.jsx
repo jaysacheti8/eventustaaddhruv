@@ -43,7 +43,7 @@ const NewHome = () => {
       <HeroCarousel />
 
       {/* Event Types Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#FAF7F2]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {eventTypes.map((event, index) => {
