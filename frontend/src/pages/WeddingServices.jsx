@@ -189,11 +189,149 @@ const WeddingServices = () => {
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>
-            <Link to="/packages">
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-md backdrop-blur-sm">
-                View Packages
-              </Button>
-            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Wedding Packages Section */}
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-lavender-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
+              Wedding Packages
+            </h2>
+            <p className="text-xl text-gray-600">
+              Choose the perfect package for your celebration
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {packages.map((pkg) => (
+              <Card 
+                key={pkg.id} 
+                className={`relative overflow-hidden hover-lift ${
+                  pkg.popular 
+                    ? 'border-2 border-purple-400 shadow-2xl scale-105' 
+                    : 'border-purple-100'
+                }`}
+              >
+                {pkg.popular && (
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-400 to-purple-300 text-white px-4 py-1 text-sm font-medium flex items-center gap-1">
+                    <Star size={14} className="fill-white" />
+                    Most Popular
+                  </div>
+                )}
+                
+                <CardHeader className="text-center pt-12 pb-6">
+                  <div className="mb-6">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
+                      <span className="text-4xl">🌸</span>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-light text-gray-900 mb-2">
+                    {pkg.name}
+                  </h3>
+                  <p className="text-lg text-purple-600 font-medium">
+                    {pkg.subtitle}
+                  </p>
+                </CardHeader>
+
+                <CardContent className="px-8 pb-8">
+                  <ul className="space-y-4 mb-8">
+                    {pkg.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
+                          <Check size={14} className="text-purple-600" />
+                        </div>
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link to="/contact">
+                    <Button 
+                      className={`w-full py-6 text-lg ${
+                        pkg.popular
+                          ? 'bg-gradient-to-r from-purple-400 to-purple-300 hover:from-purple-500 hover:to-purple-400 text-white'
+                          : 'bg-purple-50 text-purple-700 hover:bg-purple-100'
+                      }`}
+                    >
+                      Contact Us
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Wedding Tips & Tricks Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
+              Wedding Planning Tips
+            </h2>
+            <p className="text-xl text-gray-600">
+              Expert advice for your perfect day
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                image: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg',
+                title: 'Start Early',
+                tip: 'Begin planning 12-18 months in advance for destination weddings'
+              },
+              {
+                image: 'https://images.pexels.com/photos/11985359/pexels-photo-11985359.jpeg',
+                title: 'Set Priorities',
+                tip: 'Focus on what matters most to you and allocate budget accordingly'
+              },
+              {
+                image: 'https://images.pexels.com/photos/12194048/pexels-photo-12194048.jpeg',
+                title: 'Choose Wisely',
+                tip: 'Select vendors who understand your vision and aesthetic'
+              },
+              {
+                image: 'https://images.pexels.com/photos/35420251/pexels-photo-35420251.jpeg',
+                title: 'Guest Experience',
+                tip: 'Plan comfortable accommodations and seamless logistics'
+              },
+              {
+                image: 'https://images.pexels.com/photos/15966640/pexels-photo-15966640.jpeg',
+                title: 'Weather Backup',
+                tip: 'Always have contingency plans for outdoor celebrations'
+              },
+              {
+                image: 'https://images.pexels.com/photos/29034583/pexels-photo-29034583.jpeg',
+                title: 'Personal Touches',
+                tip: 'Add unique elements that reflect your love story'
+              }
+            ].map((tip, index) => (
+              <Card 
+                key={index} 
+                className="overflow-hidden border-purple-100 hover-lift group"
+                style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={tip.image} 
+                    alt={tip.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-light text-white mb-2">{tip.title}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-gray-600 leading-relaxed">{tip.tip}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
