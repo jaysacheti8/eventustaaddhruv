@@ -60,8 +60,8 @@ const Header = () => {
                 to={link.path}
                 className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-lg group overflow-hidden ${
                   isActive(link.path)
-                    ? 'text-purple-600'
-                    : 'text-gray-700 hover:text-purple-600'
+                    ? isScrolled ? 'text-purple-600' : 'text-white'
+                    : isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white/90 hover:text-white'
                 }`}
                 style={{ 
                   animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both` 
