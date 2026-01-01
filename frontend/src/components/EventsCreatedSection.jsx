@@ -56,18 +56,19 @@ const EventsCreatedSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-purple-600 via-purple-500 to-pink-500 relative overflow-hidden">
+    <section className="py-24 bg-[#C6A75E] relative overflow-hidden">
       {/* Animated background patterns */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
+          <h2 className="text-5xl md:text-6xl font-light text-white mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
             Events We've Created
           </h2>
+          <div className="w-24 h-[1px] bg-white/40 mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
