@@ -114,8 +114,8 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
                   isActive(link.path)
-                    ? 'text-purple-600 bg-gradient-to-r from-purple-100 to-pink-100'
-                    : 'text-gray-700 hover:text-purple-600 hover:bg-purple-50/50'
+                    ? 'text-[#C6A75E] bg-[#C6A75E]/10'
+                    : 'text-[#1F1F1F] hover:text-[#C6A75E] hover:bg-[#EFE9DF]'
                 }`}
               >
                 {link.label}
