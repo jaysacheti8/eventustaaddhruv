@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Sparkles, Hotel, Gift, Music, Users, Utensils, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
+import { MapPin, Sparkles, Hotel, Gift, Music, Users, Utensils, Calendar, CheckCircle, ArrowRight, Star, Check } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
-import { weddingServices } from '../mockData';
+import { Card, CardContent, CardHeader } from '../components/ui/card';
+import { weddingServices, packages } from '../mockData';
 
 const iconMap = {
   MapPin, Sparkles, Hotel, Gift, Music, Users, Utensils, Calendar, CheckCircle
