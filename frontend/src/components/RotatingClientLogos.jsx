@@ -37,12 +37,12 @@ const RotatingClientLogos = () => {
             <div
               key={`${client.name}-${index}`}
               className="flex-shrink-0 px-12 md:px-16 flex items-center justify-center transition-all duration-500 hover:scale-110"
-              style={{ minWidth: '280px', height: '120px' }}
+              style={{ minWidth: '300px', height: '140px' }}
             >
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="max-h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
                 loading="lazy"
               />
             </div>
