@@ -166,53 +166,6 @@ const NewHome = () => {
       {/* Events Created Numbers */}
       <EventsCreatedSection />
 
-      {/* Our Work Preview */}
-      <section className="py-24 bg-[#FAF7F2]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
-              Our Work
-            </h2>
-            <p className="text-xl text-gray-600">
-              Showcasing excellence in every celebration
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Large Wedding Image */}
-            <div className="md:col-span-2 md:row-span-2 image-zoom-container rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="https://images.pexels.com/photos/35420251/pexels-photo-35420251.jpeg" 
-                alt="Grand Wedding"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {[12194048, 15966640, 29034583, 35234733].map((photoId, index) => (
-              <div 
-                key={index}
-                className="image-zoom-container rounded-xl overflow-hidden shadow-lg h-64"
-              >
-                <img 
-                  src={`https://images.pexels.com/photos/${photoId}/pexels-photo-${photoId}.jpeg`}
-                  alt={`Event ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/our-work">
-              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-8 py-6 text-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-                View All Work
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Rotating Client Logos */}
       <RotatingClientLogos />
 
