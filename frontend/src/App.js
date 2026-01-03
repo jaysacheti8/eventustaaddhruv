@@ -6,9 +6,8 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import NewHome from "./pages/NewHome";
 import About from "./pages/About";
-import WeddingServices from "./pages/WeddingServices";
-import CorporateEvents from "./pages/CorporateEvents";
-import SocialEvents from "./pages/SocialEvents";
+import Services from "./pages/Services";
+import Events from "./pages/Events";
 import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import { Toaster } from "./components/ui/sonner";
@@ -21,9 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<NewHome />} />
           <Route path="/about" element={<About />} />
-          <Route path="/weddings" element={<WeddingServices />} />
-          <Route path="/corporate-events" element={<CorporateEvents />} />
-          <Route path="/social-events" element={<SocialEvents />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
