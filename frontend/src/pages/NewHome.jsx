@@ -16,24 +16,24 @@ const NewHome = () => {
       description: 'Grand celebrations where dreams come alive',
       icon: Heart,
       image: 'https://images.pexels.com/photos/11985359/pexels-photo-11985359.jpeg',
-      path: '/weddings',
-      gradient: 'from-purple-500 to-pink-500'
+      path: '/events#weddings',
+      gradient: 'from-[#C6A75E] to-[#A88849]'
     },
     {
       title: 'Corporate Events',
       description: 'Professional gatherings that inspire excellence',
       icon: Briefcase,
       image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
-      path: '/corporate-events',
-      gradient: 'from-purple-600 to-purple-500'
+      path: '/events#corporate',
+      gradient: 'from-[#C6A75E] to-[#A88849]'
     },
     {
       title: 'Social Events',
       description: 'Memorable moments crafted with perfection',
       icon: PartyPopper,
       image: 'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg',
-      path: '/social-events',
-      gradient: 'from-pink-500 to-purple-500'
+      path: '/events#social',
+      gradient: 'from-[#C6A75E] to-[#A88849]'
     }
   ];
 
