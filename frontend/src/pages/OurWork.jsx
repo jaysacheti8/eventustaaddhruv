@@ -6,16 +6,16 @@ const OurWork = () => {
 
   const categories = [
     { id: 'all', label: 'All' },
-    { id: 'fashion', label: 'Fashion & Lifestyle' },
-    { id: 'special', label: 'Special Events' },
-    { id: 'weddings', label: 'Weddings' }
+    { id: 'weddings', label: 'Weddings' },
+    { id: 'corporate', label: 'Corporate' },
+    { id: 'social', label: 'Social' }
   ];
 
-  // Map existing categories to new ones
+  // Map existing categories
   const getCategoryType = (item) => {
     if (item.category === 'wedding') return 'weddings';
-    if (item.category === 'corporate') return 'fashion';
-    return 'special';
+    if (item.category === 'corporate') return 'corporate';
+    return 'social';
   };
 
   const filteredItems = activeCategory === 'all'
