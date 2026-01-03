@@ -86,44 +86,82 @@ const NewHome = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section with Images */}
       <section className="py-24 bg-[#EFE9DF]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
+            <h2 className="text-5xl md:text-6xl font-light text-[#1F1F1F] mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-[#1F1F1F]/70 max-w-2xl mx-auto">
               Comprehensive event solutions tailored to perfection
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
-            {weddingServices.slice(0, 6).map((service, index) => (
-              <Card 
-                key={service.id} 
-                className="hover-lift border-purple-100 hover:border-purple-300 transition-all duration-300"
-                style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Venue Search',
+                image: 'https://images.pexels.com/photos/169211/pexels-photo-169211.jpeg',
+                anchor: 'venue'
+              },
+              {
+                title: 'Event Design',
+                image: 'https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg',
+                anchor: 'design'
+              },
+              {
+                title: 'Hospitality',
+                image: 'https://images.pexels.com/photos/730055/pexels-photo-730055.jpeg',
+                anchor: 'hospitality'
+              },
+              {
+                title: 'Artist Management',
+                image: 'https://images.pexels.com/photos/2788494/pexels-photo-2788494.jpeg',
+                anchor: 'artists'
+              },
+              {
+                title: 'Corporate Gifting',
+                image: 'https://images.pexels.com/photos/15841148/pexels-photo-15841148.jpeg',
+                anchor: 'gifting'
+              },
+              {
+                title: 'Complete Solutions',
+                image: 'https://images.pexels.com/photos/33726144/pexels-photo-33726144.jpeg',
+                anchor: 'complete'
+              }
+            ].map((service, index) => (
+              <Link
+                key={index}
+                to={`/services#${service.anchor}`}
+                className="group"
               >
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-3xl">✨</span>
+                <Card 
+                  className="overflow-hidden border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 hover-lift"
+                  style={{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both` }}
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1F1F1F]/80 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cormorant, serif' }}>
+                        {service.title}
+                      </h3>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-medium text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
-      <HowWeWorkNew />
+      {/* Large Image Sections */}
+      <LargeImageSections />
 
       {/* Events Created Numbers */}
       <EventsCreatedSection />
