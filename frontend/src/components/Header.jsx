@@ -29,26 +29,17 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled 
-          ? 'bg-[#FAF7F2]/98 backdrop-blur-xl shadow-sm border-b border-[#EFE9DF]' 
-          : 'bg-transparent backdrop-blur-sm'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/80 backdrop-blur-md transition-all duration-300"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg" 
-                alt="Event Ustaad" 
-                className={`transition-all duration-500 ${
-                  isScrolled ? 'h-24' : 'h-30'
-                } w-auto transform group-hover:scale-105`}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_eventelegance-3/artifacts/ltcg4g2q_loggogo.svg" 
+              alt="Event Ustaad" 
+              className="h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,21 +48,13 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 rounded-lg group overflow-hidden ${
+                className={`relative px-4 py-2 text-base font-medium tracking-wide transition-colors duration-300 whitespace-nowrap ${
                   isActive(link.path)
-                    ? isScrolled ? 'text-[#C6A75E]' : 'text-white'
-                    : isScrolled ? 'text-[#1F1F1F] hover:text-[#C6A75E]' : 'text-white/90 hover:text-white'
+                    ? 'text-[#C6A75E]'
+                    : 'text-[#1F1F1F] hover:text-[#C6A75E]'
                 }`}
-                style={{ 
-                  animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both` 
-                }}
               >
-                <span className="relative z-10">{link.label}</span>
-                <div className={`absolute inset-0 bg-[#C6A75E]/10 rounded-lg transform transition-transform duration-300 ${
-                  isActive(link.path) 
-                    ? 'scale-100' 
-                    : 'scale-0 group-hover:scale-100'
-                }`} />
+                {link.label}
               </Link>
             ))}
           </nav>
@@ -80,26 +63,21 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <a 
               href="tel:+919833310150"
-              className={`flex items-center gap-2 px-4 py-2 transition-colors duration-300 ${
-                isScrolled ? 'text-[#C6A75E] hover:text-[#A88849]' : 'text-white hover:text-[#C6A75E]'
-              }`}
+              className="flex items-center gap-2 px-4 py-2 text-[#1F1F1F] hover:text-[#C6A75E] transition-colors duration-300"
             >
               <Phone size={18} />
-              <span className="text-sm font-medium">Call Us</span>
+              <span className="text-sm font-medium whitespace-nowrap">Call Us</span>
             </a>
             <Link to="/contact">
-              <Button className="relative bg-[#C6A75E] hover:bg-[#A88849] text-white px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 overflow-hidden group">
-                <span className="relative z-10">Plan Your Event</span>
-                <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <Button className="bg-[#C6A75E] hover:bg-[#A88849] text-white px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                <span className="whitespace-nowrap">Plan Your Event</span>
               </Button>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
-              isScrolled ? 'text-[#1F1F1F] hover:bg-[#EFE9DF]' : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-lg text-[#1F1F1F] hover:bg-[#EFE9DF] transition-all duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -115,7 +93,7 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
+                className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 whitespace-nowrap ${
                   isActive(link.path)
                     ? 'text-[#C6A75E] bg-[#C6A75E]/10'
                     : 'text-[#1F1F1F] hover:text-[#C6A75E] hover:bg-[#EFE9DF]'
@@ -141,19 +119,6 @@ const Header = () => {
           </nav>
         )}
       </div>
-
-      <style>{`
-        @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </header>
   );
 };
