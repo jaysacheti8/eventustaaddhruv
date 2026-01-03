@@ -73,7 +73,8 @@ const Header = () => {
                     : 'scale-0 group-hover:scale-100'
                 }`} />
               </Link>
-            ))}\n          </nav>
+            ))}
+          </nav>
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
